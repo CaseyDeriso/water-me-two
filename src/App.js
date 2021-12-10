@@ -1,11 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Plant from "./components/plant";
+import background from "./assets/photos/back.jpg"
 
 function App() {
 	return (
 		<body>
-			<div class="top">
+			<div class="top" style={{backgroundImage: `url(${background})`}}>
 				<div class="jumbotron">
 					<div class="title">
 						<h1> Water Me!</h1>
