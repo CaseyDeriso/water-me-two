@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function plant({plantName, plantId, frequencyWater, amountWater}) {
+export default function plant(props) {
   // do stuff with plant data. 
 	const handleRemovePlant = (e) => {
 		console.log("i was removed")
@@ -10,15 +10,15 @@ export default function plant({plantName, plantId, frequencyWater, amountWater})
     console.log(`%{ID} has been watered!`)
 };
 	return (
-		<div className="plant__clearfix" id={`plant${plantId}`}>
-			<button className="water" onClick={() => waterMe(frequencyWater , plantId)}>
+		<div className="plant__clearfix" id={1}>
+			<button className="water" onClick={() => waterMe()}>
 				water
 			</button>
-			<button className={`delete${plantId}`} onClick={(e) => handleRemovePlant(e)}>
+			<button onClick={(e) => handleRemovePlant(e)}>
 				X
 			</button>
-			<div className={plantName}> plantName </div>
-			<div className={amountWater}> {amountWater} Cups </div>
+			<div> plantName </div>
+			<div> yo mama Cups </div>
 			<img src="https://picsum.photos/100/50" />
 		</div>
 	);

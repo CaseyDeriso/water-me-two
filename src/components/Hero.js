@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import background from "../assets/photos/back.jpg";
+import PlantContext from "../App"
+import { usePlantContext } from "../App";
 
-function Hero() {
+function Hero(props) {
+  const plantData = usePlantContext()
+
+  console.log(plantData);
+
   const [ plantName, setPlantName ] = useState('');
   const [ quantity, setQuantity ] = useState(null);
   const [ frequency, setFrequency ] = useState(null); 
