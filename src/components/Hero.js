@@ -6,8 +6,6 @@ import { useUserContext } from "../utils/user.context";
 function Hero() {
   const [state, dispatch] = useUserContext()
 
-  console.log(state)
-
   const [ plantName, setPlantName ] = useState('');
   const [ quantity, setQuantity ] = useState(null);
   const [ frequency, setFrequency ] = useState(null); 
