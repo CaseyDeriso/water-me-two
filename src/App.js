@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Plant, Hero } from "./components"
+import { Plant, Hero, Dashboard } from "./components"
 import React, { useContext, useState, useEffect } from "react";
 import {UserProvider} from "./utils/user.context";
 
@@ -9,10 +9,7 @@ function App() {
     <React.Fragment>
 			<UserProvider>
 				<Hero/>
-				<div className="bottom">
-					<div className="plant__container">
-					</div>
-				</div>
+				<Dashboard/>
 			</UserProvider>
     </React.Fragment>
   );
