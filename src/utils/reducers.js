@@ -8,7 +8,6 @@ import {
 export const reducer = (state, action) => {
   switch (action.type) {
     case ADD_PLANT:
-      console.log(state, action)
       return {
         ...state,
         plants: [...state.plants, action.plant]
