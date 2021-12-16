@@ -1,19 +1,20 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import background from "../assets/photos/back.jpg";
-import PlantContext from "../App"
-import { usePlantContext } from "../App";
+import { ADD_PLANT } from "../utils/actions";
+import { useUserContext } from "../utils/user.context";
 
-function Hero(props) {
-  const plantData = usePlantContext()
+function Hero() {
+  const [state, dispatch] = useUserContext()
 
-  console.log(plantData);
+  console.log(state)
 
   const [ plantName, setPlantName ] = useState('');
   const [ quantity, setQuantity ] = useState(null);
   const [ frequency, setFrequency ] = useState(null); 
 
   const handleClick = () => {
-    console.log(plantName, quantity, frequency)
+    const plantData = {plantName, quantity, frequency};
+    dispatch({type: ADD_PLANT, plant: plantData})
   }
 
   return (
@@ -21,7 +22,6 @@ function Hero(props) {
     <div className="jumbotron">
       <div className="title">
         <h1> Water Me!</h1>
-        {plantName}
         <p>
           Add your plants to your profile page along with the amount
           <br />
