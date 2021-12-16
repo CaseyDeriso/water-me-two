@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function plant(props) {
+export default function plant({plantName, quantity, frequency}) {
   // do stuff with plant data. 
 	const handleRemovePlant = (e) => {
 		console.log("i was removed")
@@ -17,8 +17,8 @@ export default function plant(props) {
 			<button onClick={(e) => handleRemovePlant(e)}>
 				X
 			</button>
-			<div> plantName </div>
-			<div> yo mama Cups </div>
+			<div> {plantName} </div>
+			<div> {quantity} cups </div>
 			<img src="https://picsum.photos/100/50" />
 		</div>
 	);
