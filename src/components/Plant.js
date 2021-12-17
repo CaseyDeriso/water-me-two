@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useUserContext } from "../utils/user.context";
 
-export default function plant({ plantName, quantity, frequency }) {
-	// const [state, dispatch] = useUserContext();
+import { isPast } from "date-fns";
+
+import { DELETE_PLANT } from "../utils/actions";
+
+
+export default function Plant({ plantName, quantity, timestamp }) {
+	const [state, dispatch] = useUserContext();
+	const {plants} = state;
+	const currentPlant = plants.filter(plant => plant.plantName === plantName)[0];
+
+	useEffect(() => {
+		if (isPast(timestamp)) {
+			console.log('time to water', timestamp)
+		}
+	}, [])
 
 	// do stuff with plant data.
 	const handleRemovePlant = (e) => {
-		console.log("i was removed");
+		dispatch({type: DELETE_PLANT, plant: currentPlant});
 	};
 
 	// const handleWaterTimeStamp = (plant) => {
@@ -15,7 +28,7 @@ export default function plant({ plantName, quantity, frequency }) {
 
 	const waterMe = (frequencyWater, ID) => {
 		// perform dom manipulation to reset watering indicator
-		console.log(`%{ID} has been watered!`);
+		console.log(`plant has been watered!`);
 	};
 	return (
 		<div className="plant__clearfix" id={1}>
