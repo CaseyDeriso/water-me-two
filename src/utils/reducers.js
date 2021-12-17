@@ -8,12 +8,12 @@ export const reducer = (state, action) => {
 				...state,
 				plants: [...state.plants, action.plant],
 			};
-    case DELETE_PLANT:
-      let newPlants = state.plants.filter(plant => plant !== action.plant);
-      return {
-        ...state,
-        plants: newPlants
-      }
+		case DELETE_PLANT:
+			let newPlants = state.plants.filter((plant) => plant !== action.plant);
+			return {
+				...state,
+				plants: newPlants,
+			};
 		default:
 			return state;
 	}

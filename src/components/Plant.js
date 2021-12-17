@@ -5,21 +5,22 @@ import { isPast } from "date-fns";
 
 import { DELETE_PLANT } from "../utils/actions";
 
-
 export default function Plant({ plantName, quantity, timestamp }) {
 	const [state, dispatch] = useUserContext();
-	const {plants} = state;
-	const currentPlant = plants.filter(plant => plant.plantName === plantName)[0];
+	const { plants } = state;
+	const currentPlant = plants.filter(
+		(plant) => plant.plantName === plantName
+	)[0];
 
 	useEffect(() => {
 		if (isPast(timestamp)) {
-			console.log('time to water', timestamp)
+			console.log("time to water", timestamp);
 		}
-	}, [])
+	}, []);
 
 	// do stuff with plant data.
 	const handleRemovePlant = (e) => {
-		dispatch({type: DELETE_PLANT, plant: currentPlant});
+		dispatch({ type: DELETE_PLANT, plant: currentPlant });
 	};
 
 	// const handleWaterTimeStamp = (plant) => {

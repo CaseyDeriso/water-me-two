@@ -1,7 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Plant, Hero, Dashboard } from "./components";
-import React, { useContext, useState, useEffect } from "react";
+import { Hero, Dashboard } from "./components";
+import React from "react";
 import { UserProvider } from "./utils/user.context";
 
 function App() {
