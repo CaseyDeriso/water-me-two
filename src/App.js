@@ -1,18 +1,18 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Plant, Hero, Dashboard } from "./components"
+import { Plant, Hero, Dashboard } from "./components";
 import React, { useContext, useState, useEffect } from "react";
-import {UserProvider} from "./utils/user.context";
+import { UserProvider } from "./utils/user.context";
 
 function App() {
-  return (
-    <React.Fragment>
+	return (
+		<React.Fragment>
 			<UserProvider>
-				<Hero/>
-				<Dashboard/>
+				<Hero />
+				<Dashboard />
 			</UserProvider>
-    </React.Fragment>
-  );
+		</React.Fragment>
+	);
 }
 
 export default App;

@@ -5,14 +5,12 @@ import { useUserContext } from "../utils/user.context";
 export default function Dashboard() {
 	const [state, dispatch] = useUserContext();
 	const { plants } = state;
-	console.log(plants);
+
 	return (
 		<div className="bottom">
 			<div className="plant__container">
 				{plants.length
-					? plants.map((plant, idx) => (
-							<Plant {...plant} key={idx}/>
-					  ))
+					? plants.map((plant, idx) => <Plant {...plant} key={idx} />)
 					: ""}
 			</div>
 		</div>

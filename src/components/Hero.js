@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import background from "../assets/photos/back.jpg";
 import { ADD_PLANT } from "../utils/actions";
 import { useUserContext } from "../utils/user.context";
+import { isFuture } from "date-fns"
 
 function Hero() {
   const [state, dispatch] = useUserContext()
@@ -11,8 +12,15 @@ function Hero() {
   const [ frequency, setFrequency ] = useState(null); 
 
   const handleClick = () => {
-    const plantData = {plantName, quantity, frequency};
+    const timestamp = createFutureTimestamp(frequency);
+    const plantData = {plantName, quantity, frequency, timestamp};
+    console.log(plantData)
     dispatch({type: ADD_PLANT, plant: plantData})
+  }
+
+  const createFutureTimestamp = (frequency) => {
+    
+    return timestamp
   }
 
   return (
@@ -32,17 +40,17 @@ function Hero() {
             type="text"
             placeholder="Plant name."
             className="pName"
-            onChange={(e) => setPlantName(e.target.value)} />
+            onChange={(e) => setPlantName(parseInt(e.target.value))} />
           <input
             type="text"
             placeholder="How much water?"
             className="aWater" 
-            onChange={(e) => setQuantity(e.target.value)}/>
+            onChange={(e) => setQuantity(parseInt(e.target.value))}/>
           <input
             type="text"
             placeholder="How often?"
             className="often" 
-            onChange={(e) => setFrequency(e.target.value)}/>
+            onChange={(e) => setFrequency(parseInt(e.target.value))}/>
           <button className="add___btn" onClick={handleClick}>
             add
           </button>
