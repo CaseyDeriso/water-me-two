@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://localhost:3000/? -->
+<html lang="en"><script type="module" src="chrome-extension://jdkknkkbebbapilgoeccciglkfbmbnfm/hook.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <link href="./Water Me_files/icon" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="It's what plants crave.">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Water Me</title>
+  <style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvaW5kZXguY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsU0FBUztFQUNUOztjQUVZO0VBQ1osbUNBQW1DO0VBQ25DLGtDQUFrQztBQUNwQzs7QUFFQTtFQUNFO2FBQ1c7QUFDYiIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBtYXJnaW46IDA7XG4gIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICdTZWdvZSBVSScsICdSb2JvdG8nLCAnT3h5Z2VuJyxcbiAgICAnVWJ1bnR1JywgJ0NhbnRhcmVsbCcsICdGaXJhIFNhbnMnLCAnRHJvaWQgU2FucycsICdIZWx2ZXRpY2EgTmV1ZScsXG4gICAgc2Fucy1zZXJpZjtcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XG4gIC1tb3otb3N4LWZvbnQtc21vb3RoaW5nOiBncmF5c2NhbGU7XG59XG5cbmNvZGUge1xuICBmb250LWZhbWlseTogc291cmNlLWNvZGUtcHJvLCBNZW5sbywgTW9uYWNvLCBDb25zb2xhcywgJ0NvdXJpZXIgTmV3JyxcbiAgICBtb25vc3BhY2U7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: rgb(196, 100, 12);
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+body {
+  height: 100vh;
+  color:rgba(14, 129, 43, 0.8);
+  font-family: 'merriweather', serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.top {
+  height: 35vh;
+  min-height: 175px;
+  width: 100%;
+  position: relative;
+  /* background-image: url(back.jpg); */
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  padding: 8px;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.jumbotron {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-items: center;
+  padding: 4vh 0 6vh;
+  height: 25vh
+}
+
+.add {
+  margin: 8px;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+}
+
+.add__container {
+  padding: 8px;
+  justify-content: center;
+  grid-gap: 8px;
+}
+
+.bottom {
+  display: flex;
+  background: lightblue;
+  width: 100%;
+  height: 65vh;
+}
+
+.plant__container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 60%;
+  height: 60%;
+}
+
+.plant__clearfix {
+  width: 100px;
+  height: 120px;
+  margin: 8px;
+  border: 2px solid black;
+  border-radius: 8px;
+  box-shadow: 0 8px 6px -8px rgba(0, 0, 0, 0.6);
+  background-color: pink;
+  text-align: center;
+  transition: .1s;
+}
+
+.plant__clearfix:hover {
+  transform: translateY(-.1rem);
+  box-shadow: 0 8px 6px -7px rgba(0, 0, 0, 0.6);
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvQXBwLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFNBQVM7RUFDVCxVQUFVO0FBQ1o7O0FBRUE7RUFDRSx3QkFBd0I7RUFDeEIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLDRCQUE0QjtFQUM1QixrQ0FBa0M7RUFDbEMsZUFBZTtFQUNmLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsV0FBVztFQUNYLGtCQUFrQjtFQUNsQixxQ0FBcUM7RUFDckMsc0JBQXNCO0VBQ3RCLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLFlBQVk7RUFDWixvQ0FBb0M7RUFDcEMsa0JBQWtCO0VBQ2xCLDBDQUEwQztBQUM1Qzs7QUFFQTtFQUNFLGFBQWE7RUFDYixpQ0FBaUM7RUFDakMsbUJBQW1CO0VBQ25CLGtCQUFrQjtFQUNsQjtBQUNGOztBQUVBO0VBQ0UsV0FBVztFQUNYLG9DQUFvQztFQUNwQyxrQkFBa0I7RUFDbEIsMENBQTBDO0VBQzFDLGFBQWE7QUFDZjs7QUFFQTtFQUNFLFlBQVk7RUFDWix1QkFBdUI7RUFDdkIsYUFBYTtBQUNmOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHFCQUFxQjtFQUNyQixXQUFXO0VBQ1gsWUFBWTtBQUNkOztBQUVBO0VBQ0UsWUFBWTtFQUNaLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsNkJBQTZCO0VBQzdCLGVBQWU7RUFDZixjQUFjO0VBQ2QsV0FBVztBQUNiOztBQUVBO0VBQ0UsWUFBWTtFQUNaLGFBQWE7RUFDYixXQUFXO0VBQ1gsdUJBQXVCO0VBQ3ZCLGtCQUFrQjtFQUNsQiw2Q0FBNkM7RUFDN0Msc0JBQXNCO0VBQ3RCLGtCQUFrQjtFQUNsQixlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsNkJBQTZCO0VBQzdCLDZDQUE2QztBQUMvQyIsInNvdXJjZXNDb250ZW50IjpbIioge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG59XG5cbmgxIHtcbiAgY29sb3I6IHJnYigxOTYsIDEwMCwgMTIpO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbnAge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbmJvZHkge1xuICBoZWlnaHQ6IDEwMHZoO1xuICBjb2xvcjpyZ2JhKDE0LCAxMjksIDQzLCAwLjgpO1xuICBmb250LWZhbWlseTogJ21lcnJpd2VhdGhlcicsIHNlcmlmO1xuICBmb250LXNpemU6IDE2cHg7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5cbi50b3Age1xuICBoZWlnaHQ6IDM1dmg7XG4gIG1pbi1oZWlnaHQ6IDE3NXB4O1xuICB3aWR0aDogMTAwJTtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAvKiBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoYmFjay5qcGcpOyAqL1xuICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiBjZW50ZXI7XG59XG5cbi50aXRsZSB7XG4gIHBhZGRpbmc6IDhweDtcbiAgYm9yZGVyOiAycHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjgpO1xuICBib3JkZXItcmFkaXVzOiA4cHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC44KTtcbn1cblxuLmp1bWJvdHJvbiB7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtcm93czogYXV0byAxZnIgYXV0bztcbiAgcGxhY2UtaXRlbXM6IGNlbnRlcjtcbiAgcGFkZGluZzogNHZoIDAgNnZoO1xuICBoZWlnaHQ6IDI1dmhcbn1cblxuLmFkZCB7XG4gIG1hcmdpbjogOHB4O1xuICBib3JkZXI6IDJweCBzb2xpZCByZ2JhKDAsIDAsIDAsIDAuOCk7XG4gIGJvcmRlci1yYWRpdXM6IDhweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjgpO1xuICBkaXNwbGF5OiBmbGV4O1xufVxuXG4uYWRkX19jb250YWluZXIge1xuICBwYWRkaW5nOiA4cHg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBncmlkLWdhcDogOHB4O1xufVxuXG4uYm90dG9tIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYmFja2dyb3VuZDogbGlnaHRibHVlO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiA2NXZoO1xufVxuXG4ucGxhbnRfX2NvbnRhaW5lciB7XG4gIG1hcmdpbjogYXV0bztcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XG4gIGZsZXgtd3JhcDogd3JhcDtcbiAgbWF4LXdpZHRoOiA2MCU7XG4gIGhlaWdodDogNjAlO1xufVxuXG4ucGxhbnRfX2NsZWFyZml4IHtcbiAgd2lkdGg6IDEwMHB4O1xuICBoZWlnaHQ6IDEyMHB4O1xuICBtYXJnaW46IDhweDtcbiAgYm9yZGVyOiAycHggc29saWQgYmxhY2s7XG4gIGJvcmRlci1yYWRpdXM6IDhweDtcbiAgYm94LXNoYWRvdzogMCA4cHggNnB4IC04cHggcmdiYSgwLCAwLCAwLCAwLjYpO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBwaW5rO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHRyYW5zaXRpb246IC4xcztcbn1cblxuLnBsYW50X19jbGVhcmZpeDpob3ZlciB7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtLjFyZW0pO1xuICBib3gtc2hhZG93OiAwIDhweCA2cHggLTdweCByZ2JhKDAsIDAsIDAsIDAuNik7XG59Il0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="top" style="background-image: url(&quot;/static/media/back.14dfcd4a.jpg&quot;);"><div class="jumbotron"><div class="title"><h1> Water Me!</h1><p>Add your plants to your profile page along with the amount<br>water each pot needs and how often you water it.</p></div><div class="add"><form class="add__container"><input type="text" placeholder="Plant name." class="pName"><input type="text" placeholder="How much water?" class="aWater"><input type="text" placeholder="How often?" class="often"><button class="add___btn">add</button></form></div></div></div><div class="bottom"><div class="plant__container"></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./Water Me_files/bundle.js"></script><script src="./Water Me_files/vendors_main.chunk.js"></script><script src="./Water Me_files/main.chunk.js"></script>
+
+</body></html>
