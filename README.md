@@ -1,4 +1,4 @@
-# Water Me Harder
+# Water Me
 
 ## Table of Contents
   - [Description](#description)
