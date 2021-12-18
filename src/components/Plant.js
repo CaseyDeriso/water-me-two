@@ -8,9 +8,9 @@ import { DELETE_PLANT } from "../utils/actions";
 export default function Plant({ plantName, quantity, timestamp }) {
 	const [state, dispatch] = useUserContext();
 	const { plants } = state;
-	const currentPlant = plants.filter(
-		(plant) => plant.plantName === plantName
-	)[0];
+	const currentPlant = plants
+		.filter((plant) => Object.values(plant).includes(plantName))
+		.pop();
 
 	useEffect(() => {
 		if (isPast(timestamp)) {

@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { ADD_PLANT, UPDATE_PLANT, DELETE_PLANT } from "./actions";
+import { ADD_PLANT, UPDATE_PLANT, DELETE_PLANT, TOGGLE_FORM } from "./actions";
 
 export const reducer = (state, action) => {
 	switch (action.type) {
@@ -9,11 +9,16 @@ export const reducer = (state, action) => {
 				plants: [...state.plants, action.plant],
 			};
 		case DELETE_PLANT:
-			let newPlants = state.plants.filter((plant) => plant !== action.plant);
+			const newPlants = state.plants.filter((plant) => plant !== action.plant);
 			return {
 				...state,
 				plants: newPlants,
 			};
+		case TOGGLE_FORM:
+			return {
+				...state,
+				displayForm: !state.displayForm
+			}
 		default:
 			return state;
 	}

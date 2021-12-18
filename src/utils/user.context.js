@@ -9,6 +9,7 @@ const { Provider } = UserContext;
 const UserProvider = ({ user, children }) => {
 	const [state, dispatch] = useUserReducer({
 		userName: "",
+		displayForm: false,
 		plants: [],
 	});
 
