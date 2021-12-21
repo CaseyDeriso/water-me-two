@@ -15,7 +15,7 @@ Deployment TBA
 ## Dependencies
 ### Front End:
 * react
-* materialui
+* date-fns
   
 ## Installation
 1. Clone it down. 
